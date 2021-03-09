@@ -1,38 +1,74 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: rgb(52, 52, 52);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Container {
+  width: 70%;
+  height: 90vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.HeaderText h1 {
+  margin: 0;
+}
+
+.HeaderText h2 {
+  margin-top: 0.5rem;
+  color: gray;
+}
+
+.HeaderNav a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 1.5rem;
+}
+
+.Main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.MainText {
+  width: 50%;
+}
+
+.MainText h1 {
+  font-size: 4rem;
+}
+
+.MainText p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.MainImage {
+  display: flex;
+  align-items: center;
+}
+
+.JinImage {
+  width: 400px;
+  height: 500px;
+  border-radius: 1rem;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
 }
