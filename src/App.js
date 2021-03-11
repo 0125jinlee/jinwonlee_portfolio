@@ -28,25 +28,56 @@ function App() {
             </a>
           </div>
         </header>
-        <main className="Main">
-          <div className="MainText">
-            <h1>
-              HELLO, I AM JIN.
-              <br />
-              I HAVE A PASSION FOR CODING
-              <br />
-              AND SOCCER.
-            </h1>
-            <p>
-              I am a self-taught front-end web developer who strives to master
-              JavaScript, React, HTML, CSS, and Python.
-              <br />I am motivated by new challenges. Through the challenges, I
-              enjoy learning something new and reinforcing the skills I already
-              have. Eventually, I want to be an expert at what I do.
-            </p>
+        <main>
+          <div className="Main">
+            <div className="MainText">
+              <h1>
+                HELLO, I AM JIN.
+                <br />
+                I HAVE A PASSION FOR CODING
+                <br />
+                AND SOCCER.
+              </h1>
+              <p>
+                I am a self-taught front-end web developer who strives to master
+                JavaScript, React, HTML, CSS, and Python.
+                <br />I like to be motivated by new challenges. I love learning
+                something new and reinforcing the skills through overcoming the
+                challenges.
+              </p>
+            </div>
+            <div className="MainImage">
+              <img src="jin.jpeg" alt="Jin" className="JinImage" />
+            </div>
           </div>
-          <div className="MainImage">
-            <img src="jin.jpeg" alt="Jin" className="JinImage" />
+          <div className="Projects">
+            <div className="BetterWorld">
+              <div className="Description">
+                <a
+                  href="https://betterworld-aac7e.web.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="Title"
+                >
+                  <h1>BetterWorld</h1>
+                </a>
+                <p>
+                  BetterWorld will help one to find a charity that one might
+                  like to make donations to.
+                  <br />
+                  The app handles the user authentication method, which an
+                  authenticated user will be able to save favorite charities on
+                  their 'My Page'.
+                  <br />
+                  From this project, I had the chance to build React/Redux app
+                  from scratch along with in-depth practice on HTML, CSS, JSX,
+                  and JavaScript.
+                </p>
+              </div>
+              <div className="Images">
+                <img src="betterworld_1.png" alt="betterworld_1" />
+              </div>
+            </div>
           </div>
         </main>
         <footer className="Footer">
