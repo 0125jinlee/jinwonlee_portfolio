@@ -106,7 +106,16 @@
 }
 
 .Projects {
+  display: flex;
+  flex-direction: column;
   margin: 3.5rem auto;
+}
+
+.Title {
+  display: block;
+  position: right;
+  font-size: 4rem;
+  margin-left: 3rem;
 }
 
 .BetterWorld {
@@ -116,41 +125,129 @@
   align-items: center;
 }
 
-.Description {
+.BwDesc {
   width: 45%;
 }
 
-.Description a {
+.BwDesc a {
+  display: flex;
+  flex-direction: row;
   text-decoration: none;
+  color: white;
+  width: fit-content;
 }
 
-.Description h1 {
+.BwDesc h1 {
   margin-top: 0;
   font-size: 2.5rem;
   color: white;
   transition: ease-in-out 0.5s;
 }
 
-.Description h1:hover {
+.BwDesc h1:hover {
   color: gray;
 }
 
-.Description p {
+.BwDesc p {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.25rem;
 }
 
-.Images {
-  width: 600px;
-  height: 350px;
+.BwImages {
+  display: flex;
+  justify-content: center;
+  width: 550px;
+  height: 320px;
+  margin-top: 2rem;
 }
 
-.Images img {
-  width: 600px;
-  height: 350px;
+.BwImages img {
+  width: 550px;
+  height: 320px;
   border-radius: 1rem;
+}
+
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.TodoDesc {
+  width: 45%;
+}
+
+.TodoDesc a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: white;
+  width: fit-content;
+}
+
+.TodoDesc h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
+.TodoDesc h1:hover {
+  color: gray;
+}
+
+.TodoImages {
+  display: flex;
+  justify-content: center;
+  width: 550px;
+  height: 320px;
+  margin-top: 2rem;
+}
+
+.TodoImages img {
+  width: 550px;
+  height: 320px;
+  border-radius: 1rem;
+}
+
+.LeftBtn {
+  left: 40%;
+  min-width: 225px;
+  justify-content: left;
+}
+
+.RightBtn {
+  right: 40%;
+  min-width: 225px;
+}
+
+.LeftBtn,
+.RightBtn {
+  position: relative;
+  background: none;
+  border: none;
+  transition: ease-in-out 0.5s;
+  outline: 0;
+}
+
+.LeftBtnIcon {
+  float: left;
+  padding-left: 20px;
+}
+
+.RightBtnIcon {
+  float: right;
+  padding-right: 20px;
+}
+
+.LeftBtnIcon,
+.RightBtnIcon {
+  color: rgb(198, 198, 198);
+  font-size: 3rem;
+  height: 4rem;
 }
 
 .Footer {

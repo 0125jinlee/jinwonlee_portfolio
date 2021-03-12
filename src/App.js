@@ -1,15 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagramSquare,
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faChevronLeft,
+  faChevronRight,
+  faLink,
+  faFilePdf,
+} from "@fortawesome/free-solid-svg-icons";
 
 import "./App.css";
 
-function App() {
+const App = () => {
+  const [imgNum, setImgNum] = useState(1);
+  const [bwHovered, setBwHovered] = useState(false);
+  const [tdHovered, setTdHovered] = useState(false);
+
+  const leftBtnHandler = () => {
+    if (imgNum === 1) {
+      setImgNum(4);
+    } else {
+      setImgNum(imgNum - 1);
+    }
+  };
+
+  const rightBtnHandler = () => {
+    if (imgNum === 4) {
+      setImgNum(1);
+    } else {
+      setImgNum(imgNum + 1);
+    }
+  };
+
   return (
     <div className="App">
       <div className="Container">
@@ -19,12 +45,19 @@ function App() {
             <h2>Front-End Web Developer</h2>
           </a>
           <div className="HeaderNav">
-            <a href="/projects">Projects</a>
+            <a
+              href="mailto: 0125jinwonlee@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="EmailIcon"
+            >
+              EMAIL <FontAwesomeIcon icon={faEnvelope} />
+            </a>
             <a
               href="https://drive.google.com/file/d/0B1y6uL8TjW23YVRwSkNxRzhzYTJhNVlyVzZGbGtBdmtmVTNB/view?usp=sharing"
               download
             >
-              Resume
+              RESUME <FontAwesomeIcon icon={faFilePdf} />
             </a>
           </div>
         </header>
@@ -41,9 +74,9 @@ function App() {
               <p>
                 I am a self-taught front-end web developer who strives to master
                 JavaScript, React, HTML, CSS, and Python.
-                <br />I like to be motivated by new challenges. I love learning
-                something new and reinforcing the skills through overcoming the
-                challenges.
+                <br />I am motivated by new challenges. I love to learn
+                something new and to reinforce the skills I have by overcoming
+                new challenges.
               </p>
             </div>
             <div className="MainImage">
@@ -51,14 +84,15 @@ function App() {
             </div>
           </div>
           <div className="Projects">
+            <h1 className="Title">MY WORKS</h1>
             <div className="BetterWorld">
-              <div className="Description">
+              <div className="BwDesc">
                 <a
                   href="https://betterworld-aac7e.web.app/"
                   target="_blank"
                   rel="noreferrer"
-                  className="Title"
                 >
+                  <FontAwesomeIcon className="LinkIcon" icon={faLink} />
                   <h1>BetterWorld</h1>
                 </a>
                 <p>
@@ -74,8 +108,74 @@ function App() {
                   and JavaScript.
                 </p>
               </div>
-              <div className="Images">
-                <img src="betterworld_1.png" alt="betterworld_1" />
+              <div
+                className="BwImages"
+                onMouseEnter={() => setBwHovered(true)}
+                onMouseLeave={() => setBwHovered(false)}
+              >
+                <button
+                  className="LeftBtn"
+                  onClick={leftBtnHandler}
+                  style={bwHovered ? { opacity: 1 } : { opacity: 0 }}
+                >
+                  <FontAwesomeIcon
+                    className="LeftBtnIcon"
+                    icon={faChevronLeft}
+                  />
+                </button>
+                <img
+                  src={"betterworld_" + imgNum + ".png"}
+                  alt={"betterworld_" + imgNum}
+                />
+                <button
+                  className="RightBtn"
+                  onClick={rightBtnHandler}
+                  style={bwHovered ? { opacity: 1 } : { opacity: 0 }}
+                >
+                  <FontAwesomeIcon
+                    className="RightBtnIcon"
+                    icon={faChevronRight}
+                  />
+                </button>
+              </div>
+            </div>
+            <div className="TodoList">
+              <div className="TodoDesc">
+                <a
+                  href="https://5ofxt.csb.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon className="LinkIcon" icon={faLink} />
+                  <h1>To Do List</h1>
+                </a>
+              </div>
+              <div
+                className="TodoImages"
+                onMouseEnter={() => setTdHovered(true)}
+                onMouseLeave={() => setTdHovered(false)}
+              >
+                <button
+                  className="LeftBtn"
+                  onClick={leftBtnHandler}
+                  style={tdHovered ? { opacity: 1 } : { opacity: 0 }}
+                >
+                  <FontAwesomeIcon
+                    className="LeftBtnIcon"
+                    icon={faChevronLeft}
+                  />
+                </button>
+                <img src={"todo_" + imgNum + ".png"} alt={"todo_" + imgNum} />
+                <button
+                  className="RightBtn"
+                  onClick={rightBtnHandler}
+                  style={tdHovered ? { opacity: 1 } : { opacity: 0 }}
+                >
+                  <FontAwesomeIcon
+                    className="RightBtnIcon"
+                    icon={faChevronRight}
+                  />
+                </button>
               </div>
             </div>
           </div>
@@ -106,19 +206,11 @@ function App() {
             >
               <FontAwesomeIcon icon={faInstagramSquare} />
             </a>
-            <a
-              href="mailto: 0125jinwonlee@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              className="EmailIcon"
-            >
-              <FontAwesomeIcon icon={faEnvelope} />
-            </a>
           </div>
         </footer>
       </div>
     </div>
   );
-}
+};
 
 export default App;
