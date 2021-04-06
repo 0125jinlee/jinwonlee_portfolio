@@ -1,0 +1,12 @@
+.Projects {
+  display: flex;
+  flex-direction: column;
+  margin: 3.5rem auto;
+}
+
+.Title {
+  display: block;
+  position: right;
+  font-size: 4rem;
+  margin-left: 3rem;
+}

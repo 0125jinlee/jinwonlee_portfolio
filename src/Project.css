@@ -1,0 +1,86 @@
+.Project {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.Descriptions {
+  width: 45%;
+}
+
+.Descriptions a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: white;
+  width: fit-content;
+}
+
+.Descriptions h1 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
+.Descriptions h1:hover {
+  color: gray;
+}
+
+.Descriptions p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.25rem;
+}
+
+.Images {
+  display: flex;
+  justify-content: center;
+  width: 550px;
+  height: 320px;
+  margin-top: 2rem;
+}
+
+.Images img {
+  width: 550px;
+  height: 320px;
+  border-radius: 1rem;
+}
+
+.LeftBtn {
+  left: 40%;
+  min-width: 225px;
+  justify-content: left;
+}
+
+.RightBtn {
+  right: 40%;
+  min-width: 225px;
+}
+
+.LeftBtn,
+.RightBtn {
+  position: relative;
+  background: none;
+  border: none;
+  transition: ease-in-out 0.5s;
+  outline: 0;
+}
+
+.LeftBtnIcon {
+  float: left;
+  padding-left: 20px;
+}
+
+.RightBtnIcon {
+  float: right;
+  padding-right: 20px;
+}
+
+.LeftBtnIcon,
+.RightBtnIcon {
+  color: rgb(198, 198, 198);
+  font-size: 3rem;
+  height: 4rem;
+}

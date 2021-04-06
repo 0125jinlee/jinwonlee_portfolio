@@ -1,0 +1,45 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.HeaderText {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.HeaderText h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  transition: ease-in-out 0.5s;
+}
+
+.HeaderText:hover h1 {
+  color: gray;
+}
+
+.HeaderText h2 {
+  font-size: 1.5rem;
+  margin-top: 0.25rem;
+  color: gray;
+  transition: ease-in-out 0.5s;
+}
+
+.HeaderText:hover h2 {
+  color: white;
+}
+
+.HeaderNav a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-left: 2rem;
+  transition: ease-in-out 0.5s;
+}
+
+.HeaderNav a:hover {
+  color: gray;
+}
