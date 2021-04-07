@@ -1,11 +1,7 @@
 .Project {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2rem;
-}
-
-.Descriptions {
-  width: 45%;
+  margin-top: 3rem;
 }
 
 .Descriptions a {
@@ -14,16 +10,18 @@
   text-decoration: none;
   color: white;
   width: fit-content;
+  transition: ease-in-out 0.3s;
 }
 
 .Descriptions h1 {
   margin-top: 0;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   color: white;
-  transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.3s;
 }
 
-.Descriptions h1:hover {
+.Descriptions h1:hover,
+.Descriptions a:hover {
   color: gray;
 }
 
@@ -31,32 +29,32 @@
   margin: 0;
   font-size: 1.5rem;
   font-weight: 500;
-  line-height: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .Images {
   display: flex;
   justify-content: center;
   width: 550px;
-  height: 320px;
-  margin-top: 2rem;
+  height: 350px;
+  margin-top: 1rem;
 }
 
 .Images img {
   width: 550px;
-  height: 320px;
+  height: 350px;
   border-radius: 1rem;
 }
 
 .LeftBtn {
   left: 40%;
-  min-width: 225px;
+  min-width: 190px;
   justify-content: left;
 }
 
 .RightBtn {
   right: 40%;
-  min-width: 225px;
+  min-width: 190px;
 }
 
 .LeftBtn,

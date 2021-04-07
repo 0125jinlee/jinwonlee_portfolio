@@ -14,7 +14,7 @@ const Project = (props) => {
 
   const leftBtnHandler = () => {
     if (imgNum === 1) {
-      setImgNum(4);
+      setImgNum(props.maxImgNum);
     } else {
       setImgNum(imgNum - 1);
     }
@@ -32,12 +32,17 @@ const Project = (props) => {
     <div
       className="Project"
       style={
-        props.description
-          ? { flexDirection: "row", alignItems: "center" }
-          : { flexDirection: "column", alignItems: "flex-start" }
+        props.description.length > 0
+          ? { flexDirection: "row" }
+          : { flexDirection: "column" }
       }
     >
-      <div className="Descriptions">
+      <div
+        className="Descriptions"
+        style={
+          props.description.length > 0 ? { width: "45%" } : { width: "100%" }
+        }
+      >
         <a href={props.link} target="_blank" rel="noreferrer">
           <FontAwesomeIcon className="LinkIcon" icon={faLink} />
           <h1>{props.title}</h1>
@@ -48,6 +53,7 @@ const Project = (props) => {
         className="Images"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
+        style={props.description > 0 ? { width: "550px" } : { width: "430px" }}
       >
         <button
           className="LeftBtn"

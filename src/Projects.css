@@ -1,12 +1,22 @@
 .Projects {
   display: flex;
   flex-direction: column;
-  margin: 3.5rem auto;
+  margin: 3rem auto;
 }
 
 .Title {
   display: block;
   position: right;
   font-size: 4rem;
-  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+
+.SmallProjects {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+}
+
+.SmallProjects img {
+  min-width: 400px;
 }

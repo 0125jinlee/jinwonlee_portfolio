@@ -16,16 +16,14 @@ const Header = () => {
           href="mailto: 0125jinwonlee@gmail.com"
           target="_blank"
           rel="noreferrer"
-          className="EmailIcon"
         >
-          EMAIL <FontAwesomeIcon icon={faEnvelope} />
+          Email <FontAwesomeIcon icon={faEnvelope} className="EmailIcon" />
         </a>
         <a
           href="https://drive.google.com/file/d/0B1y6uL8TjW23YVRwSkNxRzhzYTJhNVlyVzZGbGtBdmtmVTNB/view?usp=sharing"
           download
-          className="PdfIcon"
         >
-          RESUME <FontAwesomeIcon icon={faFilePdf} />
+          Resume <FontAwesomeIcon icon={faFilePdf} className="PdfIcon" />
         </a>
       </div>
     </header>

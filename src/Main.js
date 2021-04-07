@@ -16,8 +16,8 @@ const Main = () => {
         <p>
           I am a self-taught front-end web developer who strives to master
           JavaScript, React, HTML, CSS, and Python.
-          <br />I love to learn something new and to reinforce the skills I have
-          by overcoming new challenges.
+          <br />
+          Other than coding, I also want to be a better soccer player.
         </p>
       </div>
       <div className="MainImage">

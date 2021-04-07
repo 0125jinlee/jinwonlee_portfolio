@@ -12,11 +12,27 @@ export const data = [
     scratch along with in-depth practice on JSX, CSS, and JavaScript.`,
   },
   {
-    title: "TodoList",
+    title: "Todo List",
     link: "https://5ofxt.csb.app/",
     imgUrl: "todolist_",
     minImgNum: 1,
     maxImgNum: 4,
+    description: "",
+  },
+  {
+    title: "Tip Calculator",
+    link: "https://3rvqv.csb.app/",
+    imgUrl: "tipcalculator_",
+    minImgNum: 1,
+    maxImgNum: 4,
+    description: "",
+  },
+  {
+    title: "Calculator",
+    link: "https://2ikg9.csb.app/",
+    imgUrl: "calculator_",
+    minImgNum: 1,
+    maxImgNum: 3,
     description: "",
   },
 ];
